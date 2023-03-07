@@ -1,0 +1,75 @@
+System Architecture
+The Poppin app will be built using the following technologies:
+
+Frontend: HTML, CSS, JavaScript
+Backend: Node.js, Express.js
+Database: PostgreSQL
+The frontend and backend will communicate via RESTful API endpoints. The backend will be responsible for querying the database, while the frontend will be responsible for displaying the data and sending user input to the backend.
+
+The system architecture will be divided into two main components: the Club side and the User side. Each component will have its own set of forms and functionality.
+
+Club Side
+The Club side of the app will consist of two forms:
+
+Add Section Form
+This form will allow the club to add a new section. It will include the following fields:
+
+Number of sections
+Cost per section
+Start time
+End time
+When the form is submitted, the data will be sent to the server via a POST request. The server will then insert the data into the database.
+
+View Section Form
+This form will allow the club to view the number of people who have put in for a section and whether they have paid or not. It will include the following fields:
+
+Section ID
+Number of people
+Paid or not
+When the form is submitted, the server will query the database for the relevant information and return it to the frontend.
+
+User Side
+The User side of the app will consist of two forms:
+
+Party Size Form
+This form will allow the user to input the size of their party and whether they have paid or not. It will include the following fields:
+
+Party size
+Paid or not
+When the form is submitted, the data will be sent to the server via a POST request. The server will then insert the data into the database.
+
+Club Info Form
+This form will display the name and location of the club, as well as the cost for the night. It will include the following fields:
+
+Club name
+Club location
+Cost for the night
+When the form is submitted, the server will query the database for the relevant information and return it to the frontend.
+
+Beta Version
+For the beta version of the app, a carousel-style interface will be used to display various clubs. When the user clicks on a club, they will be taken to an info page that displays the club's name, location, and cost for the night.
+
+Database Schema
+The following tables will be created in the PostgreSQL database:
+
+Sections Table
+section_id (primary key)
+num_sections
+cost_per_section
+start_time
+end_time
+Reservations Table
+reservation_id (primary key)
+section_id (foreign key referencing Sections table)
+party_size
+paid_status
+Clubs Table
+club_id (primary key)
+club_name
+club_location
+cost_for_night
+Conclusion
+That's the basic design for the Poppin app. Of course, there may be additional features and functionality that you want to add later, but this should give you a good starting point.
+
+
+** extra credit add a functionality on there for uploading images that will be the pic for now we will do it but I wanty it to be where the club users themselves can put it on there
