@@ -10,6 +10,8 @@ CREATE TABLE clubs(
     address VARCHAR(255)
 );
 
+ALTER TABLE clubs ALTER COLUMN phone TYPE VARCHAR(255);
+
 CREATE TABLE users(
     id SERIAL PRIMARY KEY,
     name VARCHAR(255),

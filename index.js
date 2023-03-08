@@ -7,7 +7,7 @@ const address = document.getElementById("address");
 const button = document.getElementById("btn");
 
 //now we got to make the event for the post
-
+// post for clubs
 button.addEventListener("click", async ()=>{
    try {
             
@@ -37,4 +37,5 @@ button.addEventListener("click", async ()=>{
    }
 });
 
-//
+//for the users
+    
