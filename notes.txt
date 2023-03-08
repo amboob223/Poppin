@@ -73,3 +73,6 @@ That's the basic design for the Poppin app. Of course, there may be additional f
 
 
 ** extra credit add a functionality on there for uploading images that will be the pic for now we will do it but I wanty it to be where the club users themselves can put it on there
+
+foreign keys are used to keep tables connecteed you use like
+FOREIGN KEY (club_id) REFRENCES clubs(club_id) if club id is from another table
