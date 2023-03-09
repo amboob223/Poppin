@@ -39,6 +39,19 @@ app.post("/users", async(req,res)=>{
 });
 
 
+//get users get
+    app.get("/users", async(req,res)=>{
+         try {
+                const data = await pool.query(
+                "SELECT * FROM users;"
+            )
+         res.json(data)
+         } catch (error) {
+            console.log(error)
+         }
+    })
+
+
 app.listen(5000,()=>{
     console.log("yurrd")
 })
