@@ -1,4 +1,44 @@
 .mainc {
     display: flex;
     justify-content: center;
+    margin:3%;
+  
+}
+
+nav{
+    margin-top:3%;
+}
+
+.mainb{
+    display:flex;
+    text-align: center;
+    justify-content: center;
+
+}
+
+.maind{
+    display: flex;
+    justify-content: center;
+    margin-top:10%;
+    margin-left:20%;
+    margin-right:20%;
+    
+}
+
+.btns{
+    display: flex;
+    justify-content: center;
+
+}
+
+.btns>button{
+    margin:2%;
+}
+
+.clb{
+    display: flex;
+}
+
+p{
+    text-indent: 2%;
 }
