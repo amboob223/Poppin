@@ -4,7 +4,17 @@
     margin:3%;
   
 }
+.body{
+    background-color: black;
+    color:white;
+}
+.club{
+    background-color:  #B22222;
+}
 
+.user{
+    background-color: #800080;
+}
 nav{
     margin-top:3%;
 }
