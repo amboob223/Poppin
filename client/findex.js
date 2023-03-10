@@ -41,6 +41,7 @@ button.addEventListener("click", async () => {
 //for the users data
 getusers.addEventListener("click", async () => {
     try {
+        tbody.innerHTML = "";
         const allData = await fetch("http://localhost:5000/users")
         const newData = await allData.json();
         const yea = newData.rows // this is so we can use it 

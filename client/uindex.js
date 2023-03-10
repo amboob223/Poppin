@@ -40,10 +40,13 @@ button.addEventListener("click", async () => {
 //for the users data
 getclubs.addEventListener("click", async () => {
     try {
+        tbody.innerHTML = "";
+
         const allData = await fetch("http://localhost:5000/clubs")
         const newData = await allData.json();
         const yea = newData.rows // this is so we can use it 
         yea.map(info => {
+
             const row = document.createElement("tr");
             const name = document.createElement("td");
             const sectionnum = document.createElement("td");
@@ -59,6 +62,7 @@ getclubs.addEventListener("click", async () => {
             // const phone = data.innerHTML = info.phone
             // const email = data.innerHTML = info.email
             // const paying = data.innerHTML = info.paying
+
 
 
 

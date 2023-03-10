@@ -25,54 +25,63 @@
       </li>
     </ul>
   </nav>
-
-  <div>
-    <form>
-      <div class="form-group">
-        <label for="name">Club name</label>
-        <input type="text" class="form-control" id="name" placeholder="Club Name">
-      </div>
-      <div class="form-group">
-        <label for="sectionnum">#number of sections</label>
-        <input type="text" class="form-control" id="sectionnum" placeholder="sectionnum">
-      </div>
-      <div class="form-group">
-        <label for="sectioncost">Cost of section</label>
-        <input type="text" class="form-control" id="sectioncost" placeholder="cost of section">
-
-      </div>
-      <div class="form-group">
-        <label for="number">phone number</label>
-        <input type="text" class="form-control" id="number" placeholder="phone number">
-      </div>
-      <div class="form-group">
-        <label for="address">address</label>
-        <input type="text" class="form-control" id="address" placeholder="address">
-
-      </div>
-      <!-- might have to take out of the form part-->
+  <div class="mainc">
 
 
-    </form>
-    <button class="btn btn-primary" id="btn">Add Club</button>
-    <button id="getusers" class="btn btn-primary"> Who checkin</button>
     <div>
-      <table class="table">
-        <thead>
-          <tr>
-            <th scope="col">Name</th>
-            <th scope="col">Phone</th>
-            <th scope="col">Email</th>
-            <th scope="col">Payment Amount</th>
-          </tr>
+      <form>
+        <div class="form-group">
+          <label for="name">Club name</label>
+          <input type="text" class="form-control" id="name" placeholder="Club Name">
+        </div>
+        <div class="form-group">
+          <label for="sectionnum">#number of sections</label>
+          <input type="text" class="form-control" id="sectionnum" placeholder="sectionnum">
+        </div>
+        <div class="form-group">
+          <label for="sectioncost">Cost of section</label>
+          <input type="text" class="form-control" id="sectioncost" placeholder="cost of section">
 
-        </thead>
-        <tbody id="tbody">
-        </tbody>
-      </table>
+        </div>
+        <div class="form-group">
+          <label for="number">phone number</label>
+          <input type="text" class="form-control" id="number" placeholder="phone number">
+        </div>
+        <div class="form-group">
+          <label for="address">address</label>
+          <input type="text" class="form-control" id="address" placeholder="address">
+
+
+        </div>
+        <!-- might have to take out of the form part-->
+
+
+      </form>
+
+      <button class="btn btn-primary" id="btn">Add Club</button>
+      <button id="getusers" class="btn btn-primary"> Who checkin</button>
+      <div>
+      </div>
+
+
+      <div class="tablec">
+
+
+        <table class="table table-sm">
+          <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Phone</th>
+              <th scope="col">Email</th>
+              <th scope="col">Payment Amount</th>
+            </tr>
+
+          </thead>
+          <tbody id="tbody">
+          </tbody>
+        </table>
+      </div>
     </div>
-
-
   </div>
 
   <script src="findex.js"></script>
