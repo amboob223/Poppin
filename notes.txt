@@ -76,3 +76,9 @@ That's the basic design for the Poppin app. Of course, there may be additional f
 
 foreign keys are used to keep tables connecteed you use like
 FOREIGN KEY (club_id) REFRENCES clubs(club_id) if club id is from another table
+
+
+
+-- okay now that we got the data what can we do 
+    - make a button where one resource can see the others data
+    - 
