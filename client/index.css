@@ -1,54 +1,73 @@
 .mainc {
     display: flex;
     justify-content: center;
-    margin:3%;
-  
-}
-.body{
-    background-color: black;
-    color:white;
-}
-.club{
-    background-color:  #B22222;
+    margin: 3%;
+
 }
 
-.user{
+.body {
+    background-color: black;
+    color: white;
+}
+
+.club {
+    background-color: #B22222;
+}
+
+.user {
     background-color: #800080;
 }
-nav{
-    margin-top:3%;
+
+nav {
+    margin-top: 3%;
 }
 
-.mainb{
-    display:flex;
+.mainb {
+    display: flex;
     text-align: center;
     justify-content: center;
 
 }
 
-.maind{
+.maind {
     display: flex;
     justify-content: center;
-    margin-top:10%;
-    margin-left:20%;
-    margin-right:20%;
-    
+    margin-top: 10%;
+    margin-left: 20%;
+    margin-right: 20%;
+
 }
 
-.btns{
+.btns {
     display: flex;
     justify-content: center;
 
 }
 
-.btns>button{
-    margin:2%;
+.btns>button {
+    margin: 2%;
 }
 
-.clb{
+.clb {
     display: flex;
 }
 
-p{
+p {
     text-indent: 2%;
+}
+
+.userbtn {
+    background-color: #800080;
+}
+
+.clubbtn {
+    background-color: #B22222;
+}
+
+.nav-link {
+    color: #B22222;
+}
+
+.nav-link>.woop {
+    color: #800080;
 }

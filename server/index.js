@@ -4,8 +4,13 @@ const cors = require("cors");
 const pool = require("./db");
 
 //middleware
-app.use(express.json())// this is the json parser so we can break up and beable to read jsonn on diffrent browswes
 app.use(cors())// this middleware allsows us to talk with diffrent apps 
+app.use(express.json())// this is the json parser so we can break up and beable to read jsonn on diffrent browswes
+
+
+
+
+
 
 // making a post 
 
@@ -60,11 +65,31 @@ app.get("/clubs", async (req, res) => {
     } catch (error) {
         console.log(error)
     }
-})
+});
+
+// app.get("/clubs/sorted", async (req, res) => {
+//     try {
+
+
+
+//         const data = await pool.query(
+//             "SELECT * FROM clubs ORDER BY CAST(sectionnum AS INTEGER) DESC;"
+//         );
+//         res.json(data)
+//         console.log("work")
+
+
+
+//     } catch (error) {
+//         console.log(error.message)
+//     }
+// })
 
 
 
 
-app.listen(5000, () => {
+
+const PORT = process.env.PORT || 5000
+app.listen(PORT, () => {
     console.log("yurrd")
 })

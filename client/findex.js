@@ -28,7 +28,9 @@ button.addEventListener("click", async () => {
             });
         namee.value = ""
         sectionnum.value = ""
+        // parseInt(sectionnum.value)
         sectioncost.value = ""
+        // parseInt(sectioncost.value)
         phone.value = ""
         address.value = ""
         alert("okay cool we will let you know who checking")

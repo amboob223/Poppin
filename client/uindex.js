@@ -5,6 +5,10 @@ const email = document.getElementById("email");
 const paying = document.getElementById("paying");
 const button = document.getElementById("btn");
 const getclubs = document.getElementById("getclubs");
+const sort = document.getElementById("sec");
+
+
+
 
 //now we got to make the event for the post
 // post for clubs
@@ -77,8 +81,20 @@ getclubs.addEventListener("click", async () => {
         })
         console.log("work")
     } catch (error) {
-        console.log("uhmun")
+        console.log("uhnnnnnun")
     }
 })
+
+// sort.addEventListener("click", async () => {
+//     const allData = await fetch("http://localhost:5000/clubs/sorted")
+//     const newData = await allData.json();
+//     newData.map(info => {
+
+//         console.log(info)
+
+//         console.log("hh")
+//     })
+
+// })
 
 
