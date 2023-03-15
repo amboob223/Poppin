@@ -1,8 +1,17 @@
+* {
+    font-family: 'Montserrat',
+        sans-serif;
+}
+
+.capone {
+    width: 500px;
+    height: 10%;
+}
+
 .mainc {
     display: flex;
     justify-content: center;
     margin: 3%;
-
 }
 
 .body {
@@ -70,4 +79,22 @@ p {
 
 .boop {
     color: #800080;
+}
+
+.booz {
+    background-color: #800080;
+
+}
+
+.wooz {
+    background-color: #B22222;
+}
+
+.nn {
+    text-decoration: none;
+}
+
+.si {
+    width: 350px;
+    font-size: 17px;
 }
