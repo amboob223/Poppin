@@ -86,6 +86,22 @@ FOREIGN KEY (club_id) REFRENCES clubs(club_id) if club id is from another table
 - a club or user can remove themselves from the database
 
 
+   before work
+- 3 to do sort I think we can do that in js we dont need to send anythiung toi the server
+    - we make a callback that goes in to the clikc of the sort and we iterate through all the 
+      numbers and we sort them whats the largerst and we return the data
+
+- 2 change color on links and style better
+- 4 make logo
+5 - carousel for data
+6 working with the package to upload pics
+- 1   figure how to render and postsql on line try that blueprony shit for render yaml 
+\
+disclaimer
+
+flaw right now how can we vewrify the people on the club side are really ownders or is it shop at your own rsik and we assume no liability we just connect two parties people must do theyr own research.
+
+
 
 
 
