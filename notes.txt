@@ -86,15 +86,11 @@ FOREIGN KEY (club_id) REFRENCES clubs(club_id) if club id is from another table
 - a club or user can remove themselves from the database
 
 
-   before work
-- 3 to do sort I think we can do that in js we dont need to send anythiung toi the server
-    - we make a callback that goes in to the clikc of the sort and we iterate through all the 
-      numbers and we sort them whats the largerst and we return the data
 
-- 2 change color on links and style better
 - 4 make logo
-5 - carousel for data
-6 working with the package to upload pics
+ 3- carousel for data
+2 working with the package to upload pics
+
 - 1   figure how to render and postsql on line try that blueprony shit for render yaml 
 \
 disclaimer
@@ -106,3 +102,48 @@ flaw right now how can we vewrify the people on the club side are really ownders
 
 
 -
+const list = document.getElementById("list");
+const button = document.getElementById("btn");
+
+const nodes = list.childNodes // this gives us a list of the nodes  we need this to sort
+
+button.addEventListener("click", () => {
+
+    const arr = Array.from(nodes) // we made an array of the nodes from the list
+
+    const sy = arr.filter(info =>
+        info.nodeType == 1 // this is to get all trhe element nodes because the one
+    )//with filter its not a block
+
+    //okay now we are about to poupulate an array with th inner of the children
+    const life = []
+    sy.forEach(
+        li => {
+            life.push(li.innerHTML)
+        }
+    );
+    const sorted = life.sort()
+    const norted = sorted.map(num => {
+        return parseInt(num)
+    });
+    const chan = norted.sort((a, b) => {
+        return a - b;
+    });
+    //okay now we need a list of the li
+    const stuffin = list.getElementsByTagName("li")// this gives all the lis with the tag and inside the list
+    for (let i = 0; i < stuffin.length; i++) {
+        stuffin[i].innerHTML = chan[i]
+    }
+})
+
+
+// //chat gpt quicker
+// const list = document.getElementById("list");
+// const button = document.getElementById("btn");
+
+// button.addEventListener("click", () => {
+//     const nodes = Array.from(list.children); // get an array of child elements
+//     const values = nodes.map(node => parseInt(node.innerHTML)); // extract values as integers
+//     values.sort((a, b) => a - b); // sort values numerically
+//     nodes.forEach((node, index) => node.innerHTML = values[index]); // update innerHTML of each node with sorted value
+// });

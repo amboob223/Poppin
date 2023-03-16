@@ -7,6 +7,7 @@ const address = document.getElementById("address");
 const button = document.getElementById("btn");
 const getusers = document.getElementById("getusers");
 const tbody = document.getElementById("tbody");
+
 //now we got to make the event for the post
 // post for clubs
 button.addEventListener("click", async () => {
@@ -75,7 +76,8 @@ getusers.addEventListener("click", async () => {
         })
         console.log("work")
     } catch (error) {
-        console.log("uhmun")
+        console.log(error.message)
     }
 })
 
+//

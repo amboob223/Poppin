@@ -6,8 +6,8 @@ const paying = document.getElementById("paying");
 const button = document.getElementById("btn");
 const getclubs = document.getElementById("getclubs");
 const sort = document.getElementById("sec");
-
-
+const cost = document.getElementById("cost")
+const tbody = document.getElementById("tbody");
 
 
 //now we got to make the event for the post
@@ -55,6 +55,8 @@ getclubs.addEventListener("click", async () => {
             const name = document.createElement("td");
             const sectionnum = document.createElement("td");
             const sectioncost = document.createElement("td");
+
+            sectioncost.setAttribute("key", 3)
             const phone = document.createElement("td");
 
 
@@ -95,6 +97,18 @@ getclubs.addEventListener("click", async () => {
 //         console.log("hh")
 //     })
 
+// // })
+
+// cost.addEventListener("click", async () => {
+//     const nodes = tbody.childNodes // child nodes gets all the nodes of the elements in the parent
+//     const newArr = Array.from(nodes)
+//     //now we sort the info
+//     for (let i = 0; i < newArr.length; i++) {
+//         newArr.forEach(info => {
+//             console.log
+//         })
+
+//     }
+
+
 // })
-
-
