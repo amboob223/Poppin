@@ -2,11 +2,26 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const pool = require("./db");
+// const mutler = require("mutler");
+// const bodyParser = require("body-parser");
+// const upload = mutler({ dest: '/uploads' })// specifies directory to store the file 
 
 //middleware
 app.use(cors())// this middleware allsows us to talk with diffrent apps 
 app.use(express.json())// this is the json parser so we can break up and beable to read jsonn on diffrent browswes
+// app.use(bodyParser.urlencoded({ extended: true }))
 
+
+//uploading pics
+// app.post('/upload', upload.single("image"), (req, res) => {
+//     const imageData = {
+//         title: req.body.title,
+//         description: req.body.description,
+//         filename: req.body.filename
+//     }
+
+//     res.send("file upload sucessful")
+// })
 
 
 

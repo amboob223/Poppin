@@ -142,10 +142,17 @@ button.addEventListener("click", () => {
     - made form
     - deployed front End
     - designed
-
-- things left
     -make sorting buttons  - we did just got to add in font awesome and and do the other columns and
-    -add [picture uploads]
-    -fucntion that erases it every date
-    -payments
+        
+- things left
+    -add [picture uploads] mutler -mon/tues
+    -we got to make corusel weds-thurs
+     -fucntion - that erases it every date cron job to script fri
+    -payments -we take crypto and regular    weekend 
+    we got to deplot the server and the database  next weeek and redong 
+
+    next month things 
+    and redo in react nativw when finished.
+    then make sdk and put in app store
+    we got to start solidity at some pont
 we want the click button to sort the rows by cost of sections 
