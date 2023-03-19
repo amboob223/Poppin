@@ -137,13 +137,15 @@ button.addEventListener("click", () => {
 })
 
 
-// //chat gpt quicker
-// const list = document.getElementById("list");
-// const button = document.getElementById("btn");
+- things did 
+    - made a server to take and handle request
+    - made form
+    - deployed front End
+    - designed
 
-// button.addEventListener("click", () => {
-//     const nodes = Array.from(list.children); // get an array of child elements
-//     const values = nodes.map(node => parseInt(node.innerHTML)); // extract values as integers
-//     values.sort((a, b) => a - b); // sort values numerically
-//     nodes.forEach((node, index) => node.innerHTML = values[index]); // update innerHTML of each node with sorted value
-// });
+- things left
+    -make sorting buttons  - we did just got to add in font awesome and and do the other columns and
+    -add [picture uploads]
+    -fucntion that erases it every date
+    -payments
+we want the click button to sort the rows by cost of sections 

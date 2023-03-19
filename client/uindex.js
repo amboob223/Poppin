@@ -5,10 +5,9 @@ const email = document.getElementById("email");
 const paying = document.getElementById("paying");
 const button = document.getElementById("btn");
 const getclubs = document.getElementById("getclubs");
-const sort = document.getElementById("sec");
 const cost = document.getElementById("cost")
 const tbody = document.getElementById("tbody");
-
+const secnum = document.getElementById("secnum");
 
 //now we got to make the event for the post
 // post for clubs
@@ -52,6 +51,9 @@ getclubs.addEventListener("click", async () => {
         yea.map(info => {
 
             const row = document.createElement("tr");
+
+            // row.classList.add("row")// this might be the error
+            // this is how you increment the key
             const name = document.createElement("td");
             const sectionnum = document.createElement("td");
             const sectioncost = document.createElement("td");
@@ -63,6 +65,7 @@ getclubs.addEventListener("click", async () => {
             name.innerHTML = info.name
             phone.innerHTML = info.phone
             sectioncost.innerHTML = info.sectioncost
+
             sectionnum.innerHTML = info.sectionnum
 
             // const phone = data.innerHTML = info.phone
@@ -87,28 +90,114 @@ getclubs.addEventListener("click", async () => {
     }
 })
 
-// sort.addEventListener("click", async () => {
-//     const allData = await fetch("http://localhost:5000/clubs/sorted")
-//     const newData = await allData.json();
-//     newData.map(info => {
 
-//         console.log(info)
 
-//         console.log("hh")
-//     })
 
-// // })
+cost.addEventListener("click", () => {
+    try {
+        const rows = tbody.getElementsByTagName("tr"); // this gives back // We did this instead of queryselector getelementsbytagname gets all the tr in the tbody
 
-// cost.addEventListener("click", async () => {
-//     const nodes = tbody.childNodes // child nodes gets all the nodes of the elements in the parent
-//     const newArr = Array.from(nodes)
-//     //now we sort the info
-//     for (let i = 0; i < newArr.length; i++) {
-//         newArr.forEach(info => {
-//             console.log
-//         })
 
+        // this gives back a collection of html elements we can make an arrat
+
+        // Create an array of objects, where each object represents a row
+        // and contains the values of its cells as properties
+
+        const rowObjects = Array.from(rows).map(row => { //we getting the individual td
+            const cells = row.querySelectorAll("td"); // the rows and cels are node collections that go in the object of teh row object
+
+            return {
+                row,
+                cells: Array.from(cells).map(cell => parseInt(cell.innerHTML)) // this is why we was gw
+            }; //bascially the new app  maps an array with the row // we are
+        });
+
+
+        // Sort the rowObjects array based on the values in the "Gain" cell
+        // its comparing the object and cells 
+
+        rowObjects.sort((a, b) => b.cells[2] - a.cells[2]); // the [] two part is the cost column
+        //sort changes this in place the cells[2] is the cost 
+
+        // Remove the existing rows from the table
+        tbody.innerHTML = "";
+
+        // Add the sorted rows back to the table in the correct order
+        //by doing a ffor each  and a rowobj is a hash with the ro and the cell the row 
+        rowObjects.forEach(rowObj => {
+            tbody.appendChild(rowObj.row);
+        }); // these are the objects    
+
+    } catch (error) {
+        console.log(error)
+    }
+
+});
+
+secnum.addEventListener("click", async () => {
+    //again like before we got to get the rules and cells
+    const rows = tbody.getElementsByTagName("tr");//we used this so we dont mess up bootstrap class
+
+    const rowObjs = Array.from(rows).map(row => { // we have 4 because its tr
+
+        const cells = row.querySelectorAll("td") // thois a node we got ti make an array to do sort// we use a query selector nd it can give all the classes or the tags directly
+        //we use this
+        return {
+            row,
+            cells: Array.from(cells).map(cell => parseInt(cell.innerHTML)) // those brackets are 
+        }
+    })
+
+
+    rowObjs.sort((a, b) =>
+        b.cells[1] - a.cells[1] // this is sortinng the hashes basd ib the second column 
+    ) // it does this in place 
+
+    tbody.innerHTML = ""
+
+    rowObjs.forEach(rowObj => {
+        tbody.appendChild(rowObj.row)
+    })
+
+})
+
+
+
+// cost.addEventListener("dblclick", () => {
+//     try {
+//         const rows = tbody.getElementsByTagName("tr"); // We did this instead of queryselector getelementsbytagname gets all the tr in the tbody
+
+//         console.log(rows)
+
+//         // Create an array of objects, where each object represents a row
+//         // and contains the values of its cells as properties
+//         const rowObjects = Array.from(rows).map(row => { //we getting the individual td
+//             const cells = row.querySelectorAll("td");
+
+
+//             return {
+//                 row,
+//                 cells: Array.from(cells).map(cell => parseInt(cell.innerHTML))
+//             }; //bascially the new app  males an array with the row
+//         });
+
+//         // Sort the rowObjects array based on the values in the "Gain" cell
+//         rowObjects.sort((a, b) =>
+
+//             console.log(b.cells[2]),// its comparing the object and cells
+//             console.log(a.cells[2]),
+//             a.cells[2] - b.cells[2]);
+
+//         // Remove the existing rows from the table
+//         tbody.innerHTML = "";
+
+//         // Add the sorted rows back to the table in the correct order
+//         rowObjects.forEach(rowObj => {
+//             tbody.appendChild(rowObj.row);
+//         });
+//     } catch (error) {
+//         console.log(error)
 //     }
 
+// });
 
-// })
