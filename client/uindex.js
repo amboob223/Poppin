@@ -134,6 +134,38 @@ cost.addEventListener("click", () => {
 
 });
 
+
+//to reverse cost
+cost.addEventListener("dblclick", () => {
+    try {
+        const rows = tbody.getElementsByTagName("tr");
+
+        const rowObjects = Array.from(rows).map(row => {
+            const cells = row.querySelectorAll("td");
+
+            return {
+                row,
+                cells: Array.from(cells).map(cell => parseInt(cell.innerHTML))
+            };
+        });
+
+        rowObjects.sort((a, b) => a.cells[2] - b.cells[2]); // reverse the sorting order by swapping a and b
+
+        tbody.innerHTML = "";
+
+        rowObjects.forEach(rowObj => {
+            tbody.appendChild(rowObj.row);
+        });
+
+    } catch (error) {
+        console.log(error)
+    }
+
+});
+
+
+//this ascending 
+
 secnum.addEventListener("click", async () => {
     //again like before we got to get the rules and cells
     const rows = tbody.getElementsByTagName("tr");//we used this so we dont mess up bootstrap class
@@ -160,6 +192,30 @@ secnum.addEventListener("click", async () => {
     })
 
 })
+//to reverse
+secnum.addEventListener("dblclick", async () => {
+    const rows = tbody.getElementsByTagName("tr");
+
+    const rowObjs = Array.from(rows).map(row => {
+        const cells = row.querySelectorAll("td")
+        return {
+            row,
+            cells: Array.from(cells).map(cell => parseInt(cell.innerHTML))
+        }
+    })
+
+    rowObjs.sort((a, b) =>
+        a.cells[1] - b.cells[1] // the only change is to reverse the order of a and b, which sorts the hashes based on the second column in ascending order
+    )
+
+    tbody.innerHTML = ""
+
+    rowObjs.forEach(rowObj => {
+        tbody.appendChild(rowObj.row)
+    })
+
+})
+
 
 
 
