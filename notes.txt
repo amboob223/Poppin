@@ -156,3 +156,11 @@ button.addEventListener("click", () => {
     then make sdk and put in app store
     we got to start solidity at some pont
 we want the click button to sort the rows by cost of sections 
+
+
+I put my sever on render and it is live do I need to change my endpoint or fetch request or will it still work and do I need to make a postgres instance hosted by render as well
+If you have deployed your server on Render and it is live, you do not need to change the endpoint or fetch request in your client-side code. As long as your server is accessible via its endpoint URL, your client-side code should be able to communicate with the server as expected.
+
+Regarding the database, if you were previously using a local database on your machine during development, you will need to update your database configuration to connect to a hosted database on Render. Render offers a managed PostgreSQL service, so you can create a new PostgreSQL database instance on Render and update your server configuration to use this new database.
+
+Once you have created a new PostgreSQL database instance on Render, you will need to update your server configuration to connect to this database. You can obtain the connection information for your Render-hosted database from the Render dashboard and update your server code accordingly.

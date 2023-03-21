@@ -1,5 +1,5 @@
 CREATE DATABASE poppin;
-id SERIAL PRIMARY KEY,
+id(SERIAL PRIMARY KEY,
     name VARCHAR(255),
     sectionnum VARCHAR(255),
     sectioncost VARCHAR(255),
